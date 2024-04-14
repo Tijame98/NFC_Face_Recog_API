@@ -1,0 +1,8 @@
+Hostname: dpg-codpk7i0si5c739589h0-a
+Port : 5432
+Database : projet_v7q0
+Username : projet_v7q0_user
+Password : inTgEqwrCbWzMoiL08so7tqaKTJM1z3W
+Internal Database URL : postgres://projet_v7q0_user:inTgEqwrCbWzMoiL08so7tqaKTJM1z3W@dpg-codpk7i0si5c739589h0-a/projet_v7q0
+External Database URL : postgres://projet_v7q0_user:inTgEqwrCbWzMoiL08so7tqaKTJM1z3W@dpg-codpk7i0si5c739589h0-a.oregon-postgres.render.com/projet_v7q0
+PSQL Command : PGPASSWORD=inTgEqwrCbWzMoiL08so7tqaKTJM1z3W psql -h dpg-codpk7i0si5c739589h0-a.oregon-postgres.render.com -U projet_v7q0_user projet_v7q0
