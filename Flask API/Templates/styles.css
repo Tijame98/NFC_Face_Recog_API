@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Basic reset for padding and margin */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Basic styling */
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+  }
+  
+  header .logo img {
+    height: auto;
+    width: 120px; /* Adjust as needed */
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin : 0;
+    padding: 0;
+  }
+  
+  header nav ul li a {
+    margin-right: 30px; /* Adjust spacing between nav items */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  header nav ul li:last-child {
+    margin-right: 0; /* No margin for the last item to align it to the right */
+  }
+  
+  header nav ul li.connexion a {
+    padding: 10px 25px;
+    background-color: #00007B; /* Match this color to your design */
+    color: white;
+    border-radius: 20px; /* Rounded edges */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .face img {
+    width: 100%; /* Adjust as needed for your layout */
+    max-width: 400px; /* Example size */
+    display: block;
+    margin: 20px auto; /* Center image */
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .cards a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color from parent */
+  }
+
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  .cards a h2 {
+    padding: 10px 0;
+    background-color: #e6e6e6;
+    text-decoration-line: none; /* Removes underline from headings */
+    /* Add any additional styles for your heading here */
+  }
+
+  
+  .card:hover {
+    background-color: #e8e8e8; /* Lightens background on hover */
+  }
+
+  main{
+    background-color: #f0f0f0;
+  }
+  /* Responsive design adjustments can be added here as well */
+  
