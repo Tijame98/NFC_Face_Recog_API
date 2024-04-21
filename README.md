@@ -21,6 +21,13 @@ app.py: The main Flask application file. It initializes the app and ties togethe
 templates/: Contains HTML files that serve as templates for the web interface, which display attendance records and allow administrative actions.
 static/: Holds CSS files and dependencies files for styling and interactive functionality on the web frontend.
 
+## RC522
+
+Scripts related to the operation of the RC522 NFC reader are stored here. They handle the reading of NFC tags and the initial authentication of student IDs.
+
+det_ID.py: This script is responsible for interfacing with the RC522 NFC reader, capturing the UID of NFC cards presented by students.
+extract_ID.py: checking captured UID of NFC cards against the database.
+
 ## Cloud Data Base hosted on Render
 
 Hostname : dpg-cocsnu63e1ms739lgb80-a
