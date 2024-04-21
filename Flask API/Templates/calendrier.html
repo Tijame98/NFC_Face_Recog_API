@@ -1,0 +1,1336 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+13/04/2024 22:46:20 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1920, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:500,400,700,600|Lato:500,400,800");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/661b09c841f9352752c69ef2.661af4aca6d58bda834412b1.nYLD8JQ.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: auto;
+}
+
+.full-height-a {
+  height: auto;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --dodger-blue: #2fa5ff;
+  --granite-gray: #666666;
+  --mercury: #e5e5e5;
+  --white: #ffffff;
+ 
+  --font-size-l: 14px;
+  --font-size-m: 12px;
+  --font-size-xl: 16px;
+  --font-size-xxl: 18px;
+  --font-size-xxxl: 22px;
+  --font-size-xxxxl: 30px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-lato: "Lato", Helvetica;
+}
+.lato-normal-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-extra-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.lato-normal-granite-gray-12px {
+  color: var(--granite-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-normal-granite-gray-30px {
+  color: var(--granite-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - etudiant-calendrier */
+
+.etudiant-calendrier {
+  background-color: var(--white);
+  height: 3240px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.etudiant-calendrier .rectangle-1-lDJOgN {
+  background-color: var(--white);
+  box-shadow: 0px 2px 4px #00000026;
+  height: 100px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1920px;
+}
+
+.etudiant-calendrier .group-1870-lDJOgN {
+  background-color: transparent;
+  height: 44px;
+  left: 1669px;
+  position: absolute;
+  top: 28px;
+  width: 128px;
+}
+
+.etudiant-calendrier .rectangle-2-xWeV5Q {
+  background-color: #00007b;
+  border-radius: 22px;
+  height: 44px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+}
+
+.etudiant-calendrier .dconnexion-xWeV5Q {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 13px;
+  width: auto;
+}
+
+.etudiant-calendrier .pour-etudiant-lDJOgN {
+  background-color: transparent;
+  color: #00007b;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 831px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 38px;
+  width: auto;
+}
+
+.etudiant-calendrier .pour-professeur-lDJOgN {
+  background-color: transparent;
+  color: #343a40;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 1041px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 38px;
+  width: auto;
+}
+
+.etudiant-calendrier .pour-administration-lDJOgN {
+  background-color: transparent;
+  color: #343a40;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 1277px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 38px;
+  width: auto;
+}
+
+.etudiant-calendrier .group-1869-lDJOgN {
+  background-color: transparent;
+  height: 61px;
+  left: 146px;
+  position: absolute;
+  top: 27px;
+  width: 113px;
+}
+
+.etudiant-calendrier .group-1880-lDJOgN {
+  background-color: transparent;
+  height: 833px;
+  left: 321px;
+  position: absolute;
+  top: 200px;
+  width: 1388px;
+}
+
+.etudiant-calendrier .link-jour-5dQWQl {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 1213px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  white-space: nowrap;
+  width: 28px;
+}
+
+.etudiant-calendrier .semaine-5dQWQl {
+  background-color: transparent;
+  color: var(--dodger-blue);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 1265px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.etudiant-calendrier .after-5dQWQl {
+  background-color: var(--dodger-blue);
+  box-shadow: 0px 1px 2px #0000001a;
+  height: 2px;
+  left: 1253px;
+  position: absolute;
+  top: 19px;
+  width: 76px;
+}
+
+.etudiant-calendrier .aujourdhui-5dQWQl {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 270px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  white-space: nowrap;
+  width: 72px;
+}
+
+.etudiant-calendrier .vector-5dQWQl {
+  left: 413px;
+}
+
+.etudiant-calendrier .vector-TOoDBS {
+  left: 455px;
+}
+
+.etudiant-calendrier .heading-2-link-07-apr-202413-apr-2024-5dQWQl {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  height: 15px;
+  left: 500px;
+  letter-spacing: 0.00px;
+  line-height: 15.4px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 191px;
+}
+
+.etudiant-calendrier .cell-5dQWQl {
+  left: 60px;
+}
+
+.etudiant-calendrier .small-lun-7xcS1c {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 20px;
+}
+
+.etudiant-calendrier .x8-7xcS1c {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 18px;
+}
+
+.etudiant-calendrier .cell-TOoDBS {
+  left: 280px;
+}
+
+.etudiant-calendrier .small-mar-8QSJ55 {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 22px;
+}
+
+.etudiant-calendrier .x9-8QSJ55 {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 18px;
+}
+
+.etudiant-calendrier .cell-CNMtEz {
+  left: 500px;
+}
+
+.etudiant-calendrier .small-mer-J9nD6x {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 22px;
+}
+
+.etudiant-calendrier .x10-J9nD6x {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.etudiant-calendrier .cell-gherrF {
+  left: 720px;
+}
+
+.etudiant-calendrier .small-jeu-1UkIko {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 19px;
+}
+
+.etudiant-calendrier .x11-1UkIko {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.etudiant-calendrier .cell-82CT0y {
+  left: 940px;
+}
+
+.etudiant-calendrier .small-ven-joB6nl {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 21px;
+}
+
+.etudiant-calendrier .x12-joB6nl {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.etudiant-calendrier .cell-5jEJGi {
+  left: 1160px;
+}
+
+.etudiant-calendrier .small-sam-DTf5Kl {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 23px;
+}
+
+.etudiant-calendrier .x13-DTf5Kl {
+  background-color: transparent;
+  height: 30px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.etudiant-calendrier .data-5dQWQl {
+  left: 0px;
+  top: 132px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x08-am-dxzaqb {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.etudiant-calendrier .data-TOoDBS {
+  left: 60px;
+  top: 132px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-CNMtEz {
+  left: 0px;
+  top: 202px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x09-am-UxNASy {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.etudiant-calendrier .data-gherrF {
+  left: 60px;
+  top: 202px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-82CT0y {
+  left: 0px;
+  top: 272px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x10-am-5GQM1o {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.etudiant-calendrier .data-5jEJGi {
+  left: 60px;
+  top: 272px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-tGDise {
+  left: 0px;
+  top: 342px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x11-am-Tajt9G {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 38px;
+}
+
+.etudiant-calendrier .data-00xvYu {
+  left: 60px;
+  top: 342px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-bTxJ6c {
+  left: 0px;
+  top: 412px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x12-am-jWYxRZ {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 38px;
+}
+
+.etudiant-calendrier .data-ms8hox {
+  left: 60px;
+  top: 412px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-CUfL04 {
+  left: 0px;
+  top: 482px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x02-pm-reYdbo {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.etudiant-calendrier .data-py38sw {
+  left: 60px;
+  top: 482px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-ka1ufP {
+  left: 0px;
+  top: 553px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x03-pm-tSEAlW {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.etudiant-calendrier .data-ClIO8H {
+  left: 60px;
+  top: 553px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-3zSLjt {
+  left: 0px;
+  top: 623px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x04-pm-MM0j7a {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 39px;
+}
+
+.etudiant-calendrier .data-fxJi8N {
+  left: 60px;
+  top: 623px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-Hp2leC {
+  left: 0px;
+  top: 693px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x05-pm-KoIzFj {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 38px;
+}
+
+.etudiant-calendrier .data-sXxfWw {
+  left: 60px;
+  top: 693px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .data-7ShN25 {
+  left: 0px;
+  top: 763px;
+  width: 60px;
+}
+
+.etudiant-calendrier .x06-pm-vuOerR {
+  background-color: transparent;
+  height: 12px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.etudiant-calendrier .data-rvQqmL {
+  left: 60px;
+  top: 763px;
+  width: 1320px;
+}
+
+.etudiant-calendrier .group-3776-lDJOgN {
+  background-color: transparent;
+  height: 136px;
+  left: 0px;
+  position: absolute;
+  top: 594px;
+  width: 223px;
+}
+
+.etudiant-calendrier .rectangle-741-kHxulb {
+  background-color: #fafafa;
+  border-radius: 0px 12px 12px 0px;
+  height: 136px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 213px;
+}
+
+.etudiant-calendrier .se-04-kHxulb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  width: auto;
+}
+
+.etudiant-calendrier .mr-majite-kHxulb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  height: 22px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 15px;
+  width: auto;
+}
+
+.etudiant-calendrier .line-69-kHxulb {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  position: absolute;
+  top: 68px;
+  width: 213px;
+}
+
+.etudiant-calendrier .x234679808-kHxulb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 91px;
+  width: auto;
+}
+
+.etudiant-calendrier .code-kHxulb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 91px;
+  width: auto;
+}
+
+.etudiant-calendrier .ellipse-3-kHxulb {
+  background-color: var(--dodger-blue);
+  border-radius: 17.5px;
+  height: 35px;
+  left: 24px;
+  position: absolute;
+  top: 18px;
+  width: 35px;
+}
+
+.etudiant-calendrier .m-kHxulb {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+  height: 27px;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 22px;
+  width: auto;
+}
+
+.etudiant-calendrier .group-3777-lDJOgN {
+  background-color: transparent;
+  height: 367px;
+  left: -1px;
+  position: absolute;
+  top: 201px;
+  width: 215px;
+}
+
+.etudiant-calendrier .rectangle-651-bztuam {
+  background-color: #f1f1f1;
+  border-radius: 0px 12px 12px 0px;
+  height: 367px;
+  left: 1px;
+  position: absolute;
+  top: 0px;
+  width: 212px;
+}
+
+.etudiant-calendrier .item-bztuam {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #eff2f7;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 212px;
+}
+
+.etudiant-calendrier .link-swY1RJ {
+  background-color: transparent;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 206px;
+}
+
+.etudiant-calendrier .profil-UPpPjy {
+  background-color: transparent;
+  color: var(--granite-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 14px;
+  width: 34px;
+}
+
+.etudiant-calendrier .group-3775-bztuam {
+  background-color: transparent;
+  height: 39px;
+  left: 0px;
+  position: absolute;
+  top: 54px;
+  width: 158px;
+}
+
+.etudiant-calendrier .rectangle-818-ixXptY {
+  background-color: var(--white);
+  border-radius: 0px 12px 12px 0px;
+  height: 39px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 158px;
+}
+
+.etudiant-calendrier .rectangle-819-ixXptY {
+  background-color: var(--dodger-blue);
+  height: 39px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 4px;
+}
+
+.etudiant-calendrier .calendrier-bztuam {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  height: 22px;
+  left: 26px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 62px;
+  width: 67px;
+}
+
+.etudiant-calendrier .signaler-un-problme-lDJOgN {
+  background-color: transparent;
+  color: var(--granite-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 308px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-calendrier .rectangle-820-lDJOgN {
+  background-color: #44ea5f;
+  border-radius: 11px;
+  height: 343px;
+  left: 384px;
+  position: absolute;
+  top: 336px;
+  width: 213px;
+}
+
+.etudiant-calendrier .rectangle-829-lDJOgN {
+  background-color: #44ea5f;
+  border-radius: 11px;
+  height: 203px;
+  left: 604px;
+  position: absolute;
+  top: 336px;
+  width: 213px;
+}
+
+.etudiant-calendrier .rectangle-830-lDJOgN {
+  background-color: #f9a728;
+  border-radius: 11px;
+  height: 203px;
+  left: 604px;
+  position: absolute;
+  top: 546px;
+  width: 213px;
+}
+
+.etudiant-calendrier .prsent-lDJOgN {
+  left: 463px;
+  top: 495px;
+}
+
+.etudiant-calendrier .span0-91IbdW {
+}
+
+.etudiant-calendrier .span1-91IbdW {
+}
+
+.etudiant-calendrier .prsent-9mQqNC {
+  left: 683px;
+  top: 425px;
+}
+
+.etudiant-calendrier .span0-dDtkGL {
+}
+
+.etudiant-calendrier .span1-dDtkGL {
+}
+
+.etudiant-calendrier .absent-lDJOgN {
+  left: 683px;
+  top: 635px;
+}
+
+.etudiant-calendrier .rectangle-828-lDJOgN {
+  background-color: #f9a728;
+  border-radius: 11px;
+  height: 343px;
+  left: 384px;
+  position: absolute;
+  top: 686px;
+  width: 213px;
+}
+
+.etudiant-calendrier .rectangle-821-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 600px;
+  position: absolute;
+  top: 301px;
+  width: 2px;
+}
+
+.etudiant-calendrier .rectangle-823-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 820px;
+  position: absolute;
+  top: 301px;
+  width: 2px;
+}
+
+.etudiant-calendrier .rectangle-824-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 1040px;
+  position: absolute;
+  top: 301px;
+  width: 2px;
+}
+
+.etudiant-calendrier .rectangle-825-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 1260px;
+  position: absolute;
+  top: 301px;
+  width: 2px;
+}
+
+.etudiant-calendrier .rectangle-826-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 1480px;
+  position: absolute;
+  top: 301px;
+  width: 2px;
+}
+
+.etudiant-calendrier .rectangle-827-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 1700px;
+  position: absolute;
+  top: 301px;
+  width: 1px;
+}
+
+.etudiant-calendrier .rectangle-822-lDJOgN {
+  background-color: var(--mercury);
+  height: 732px;
+  left: 622px;
+  position: absolute;
+  top: 666px;
+  transform: rotate(-90deg);
+  width: 1px;
+}
+
+.etudiant-calendrier .absent-9mQqNC {
+  left: 465px;
+  top: 845px;
+}
+
+.etudiant-calendrier .absent {
+  background-color: transparent;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-calendrier .cell {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--mercury);
+  height: 62px;
+  position: absolute;
+  top: 39px;
+  width: 220px;
+}
+
+.etudiant-calendrier .data {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--mercury);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 70px;
+  position: absolute;
+}
+
+.etudiant-calendrier .prsent {
+  background-color: transparent;
+  height: 22px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-calendrier .vector {
+  background-color: transparent;
+  height: 9px;
+  position: absolute;
+  top: 4px;
+  width: 6px;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="etudiant-calendrier"><div class="container-center-horizontal"><div class="etudiant-calendrier screen " data-id="51:2"><div class="rectangle-1-lDJOgN" data-id="51:4"></div><div class="group-1870-lDJOgN" data-id="51:5"><div class="rectangle-2-xWeV5Q" data-id="51:6"></div><div class="dconnexion-xWeV5Q" data-id="51:7">Déconnexion</div></div><div class="pour-etudiant-lDJOgN" data-id="51:10">Pour Etudiant</div><div class="pour-professeur-lDJOgN" data-id="51:11">Pour Professeur</div><div class="pour-administration-lDJOgN" data-id="51:12">Pour Administration</div><img class="group-1869-lDJOgN" data-id="51:27" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b0b3a7a640aadccad4eee/img/group-1869@4x.png" alt="Group 1869"><div class="group-1880-lDJOgN" data-id="51:600"><div class="link-jour-5dQWQl valign-text-middle" data-id="51:142">Jour</div><div class="semaine-5dQWQl valign-text-middle" data-id="51:144">Semaine</div><div class="after-5dQWQl" data-id="51:145"></div><div class="aujourdhui-5dQWQl valign-text-middle" data-id="51:148">Aujourd’hui</div><img class="vector-5dQWQl vector" data-id="51:150" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b0b3a7a640aadccad4eee/img/vector.svg" alt="Vector"><img class="vector-TOoDBS vector" data-id="51:152" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b0b3a7a640aadccad4eee/img/vector-1.svg" alt="Vector"><div class="heading-2-link-07-apr-202413-apr-2024-5dQWQl valign-text-middle" data-id="51:153">07-Apr-2024   à   13-Apr-2024</div><div class="cell-5dQWQl cell" data-id="51:161"><div class="small-lun-7xcS1c valign-text-middle lato-normal-granite-gray-12px" data-id="51:162">Lun</div><div class="x8-7xcS1c valign-text-middle lato-normal-granite-gray-30px" data-id="51:163">8</div></div><div class="cell-TOoDBS cell" data-id="51:164"><div class="small-mar-8QSJ55 valign-text-middle lato-normal-granite-gray-12px" data-id="51:165">Mar</div><div class="x9-8QSJ55 valign-text-middle lato-normal-granite-gray-30px" data-id="51:166">9</div></div><div class="cell-CNMtEz cell" data-id="51:167"><div class="small-mer-J9nD6x valign-text-middle lato-normal-granite-gray-12px" data-id="51:168">Mer</div><div class="x10-J9nD6x valign-text-middle lato-normal-granite-gray-30px" data-id="51:169">10</div></div><div class="cell-gherrF cell" data-id="51:170"><div class="small-jeu-1UkIko valign-text-middle lato-normal-granite-gray-12px" data-id="51:171">Jeu</div><div class="x11-1UkIko valign-text-middle lato-normal-granite-gray-30px" data-id="51:172">11</div></div><div class="cell-82CT0y cell" data-id="51:173"><div class="small-ven-joB6nl valign-text-middle lato-normal-granite-gray-12px" data-id="51:174">Ven</div><div class="x12-joB6nl valign-text-middle lato-normal-granite-gray-30px" data-id="51:175">12</div></div><div class="cell-5jEJGi cell" data-id="51:176"><div class="small-sam-DTf5Kl valign-text-middle lato-normal-granite-gray-12px" data-id="51:177">Sam</div><div class="x13-DTf5Kl valign-text-middle lato-normal-granite-gray-30px" data-id="51:178">13</div></div><div class="data-5dQWQl data" data-id="51:211"><div class="x08-am-dxzaqb valign-text-middle lato-normal-black-12px" data-id="51:212">08 AM</div></div><div class="data-TOoDBS data" data-id="51:213"></div><div class="data-CNMtEz data" data-id="51:215"><div class="x09-am-UxNASy valign-text-middle lato-normal-black-12px" data-id="51:216">09 AM</div></div><div class="data-gherrF data" data-id="51:217"></div><div class="data-82CT0y data" data-id="51:219"><div class="x10-am-5GQM1o valign-text-middle lato-normal-black-12px" data-id="51:220">10 AM</div></div><div class="data-5jEJGi data" data-id="51:221"></div><div class="data-tGDise data" data-id="51:223"><div class="x11-am-Tajt9G valign-text-middle lato-normal-black-12px" data-id="51:224">11 AM</div></div><div class="data-00xvYu data" data-id="51:225"></div><div class="data-bTxJ6c data" data-id="51:227"><div class="x12-am-jWYxRZ valign-text-middle lato-normal-black-12px" data-id="51:228">12 AM</div></div><div class="data-ms8hox data" data-id="51:229"></div><div class="data-CUfL04 data" data-id="51:231"><div class="x02-pm-reYdbo valign-text-middle lato-normal-black-12px" data-id="51:232">02 PM</div></div><div class="data-py38sw data" data-id="51:233"></div><div class="data-ka1ufP data" data-id="51:235"><div class="x03-pm-tSEAlW valign-text-middle lato-normal-black-12px" data-id="51:236">03 PM</div></div><div class="data-ClIO8H data" data-id="51:237"></div><div class="data-3zSLjt data" data-id="51:239"><div class="x04-pm-MM0j7a valign-text-middle lato-normal-black-12px" data-id="51:240">04 PM</div></div><div class="data-fxJi8N data" data-id="51:241"></div><div class="data-Hp2leC data" data-id="51:243"><div class="x05-pm-KoIzFj valign-text-middle lato-normal-black-12px" data-id="51:244">05 PM</div></div><div class="data-sXxfWw data" data-id="51:245"></div><div class="data-7ShN25 data" data-id="51:247"><div class="x06-pm-vuOerR valign-text-middle lato-normal-black-12px" data-id="51:248">06 PM</div></div><div class="data-rvQqmL data" data-id="51:249"></div></div><div class="group-3776-lDJOgN" data-id="57:662"><div class="rectangle-741-kHxulb" data-id="56:596"></div><div class="se-04-kHxulb valign-text-middle" data-id="56:597">SE-04</div><div class="mr-majite-kHxulb valign-text-middle" data-id="56:598">Mr. Majite</div><img class="line-69-kHxulb" data-id="56:599" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b0b3a7a640aadccad4eee/img/line-69.svg" alt="Line 69"><div class="x234679808-kHxulb valign-text-middle" data-id="56:605">234679808</div><div class="code-kHxulb valign-text-middle" data-id="56:606">Code :</div><div class="ellipse-3-kHxulb" data-id="56:607"></div><div class="m-kHxulb valign-text-middle" data-id="56:608">M</div></div><div class="group-3777-lDJOgN" data-id="57:663"><div class="rectangle-651-bztuam" data-id="51:555"></div><div class="item-bztuam" data-id="51:560"><div class="link-swY1RJ" data-id="51:561"><div class="profil-UPpPjy valign-text-middle" data-id="51:562">Profil</div></div></div><div class="group-3775-bztuam" data-id="57:645"><div class="rectangle-818-ixXptY" data-id="57:639"></div><div class="rectangle-819-ixXptY" data-id="57:640"></div></div><div class="calendrier-bztuam valign-text-middle" data-id="51:568">Calendrier</div></div><div class="signaler-un-problme-lDJOgN valign-text-middle" data-id="57:868">Signaler un problème</div><div class="rectangle-820-lDJOgN" data-id="57:666"></div><div class="rectangle-829-lDJOgN" data-id="57:680"></div><div class="rectangle-830-lDJOgN" data-id="57:682"></div><div class="prsent-lDJOgN valign-text-middle prsent lato-extra-bold-white-16px" data-id="57:678"><span><span class="span0-91IbdW lato-extra-bold-white-16px">P</span><span class="span1-91IbdW lato-extra-bold-white-16px">résent</span></span></div><div class="prsent-9mQqNC valign-text-middle prsent lato-extra-bold-white-16px" data-id="57:681"><span><span class="span0-dDtkGL lato-extra-bold-white-16px">P</span><span class="span1-dDtkGL lato-extra-bold-white-16px">résent</span></span></div><div class="absent-lDJOgN valign-text-middle absent lato-extra-bold-white-16px" data-id="57:683">Absent</div><div class="rectangle-828-lDJOgN" data-id="57:676"></div><div class="rectangle-821-lDJOgN" data-id="57:668"></div><div class="rectangle-823-lDJOgN" data-id="57:671"></div><div class="rectangle-824-lDJOgN" data-id="57:672"></div><div class="rectangle-825-lDJOgN" data-id="57:673"></div><div class="rectangle-826-lDJOgN" data-id="57:674"></div><div class="rectangle-827-lDJOgN" data-id="57:675"></div><div class="rectangle-822-lDJOgN" data-id="57:670"></div><div class="absent-9mQqNC valign-text-middle absent lato-extra-bold-white-16px" data-id="57:679">Absent</div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

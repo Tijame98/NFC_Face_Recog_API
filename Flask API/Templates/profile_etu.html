@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+13/04/2024 23:15:48 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:500,400,700,600|Lato:500,400|Roboto:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/661af4aca6d58bda834412ae.661af4aca6d58bda834412b1.nYLD8JQ.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-haze: #f7f7f7;
+  --cloud: #c6c6c8;
+  --dodger-blue: #2fa5ff;
+  --log-cabin: #222222;
+  --white: #ffffff;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 14px;
+  --font-size-xl: 18px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-lato: "Lato", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-normal-log-cabin-14px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-medium-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-normal-cloud-16px {
+  color: var(--cloud);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - etudiant-profile */
+
+.etudiant-profile {
+  background-color: var(--white);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.etudiant-profile .group-3776-VTLyNd {
+  height: 136px;
+  left: 1px;
+  top: 493px;
+  width: 221px;
+}
+
+.etudiant-profile .rectangle-741-g5xP2b {
+  background-color: #fafafa;
+  border-radius: 0px 12px 12px 0px;
+  height: 136px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 213px;
+}
+
+.etudiant-profile .se-04-g5xP2b {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  width: auto;
+}
+
+.etudiant-profile .mr-majite-g5xP2b {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: 22px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 15px;
+  width: auto;
+}
+
+.etudiant-profile .line-69-g5xP2b {
+  background-color: transparent;
+  height: 1px;
+  left: 0px;
+  position: absolute;
+  top: 68px;
+  width: 213px;
+}
+
+.etudiant-profile .x234679808-g5xP2b {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 91px;
+  width: auto;
+}
+
+.etudiant-profile .code-g5xP2b {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 91px;
+  width: auto;
+}
+
+.etudiant-profile .ellipse-3-g5xP2b {
+  background-color: var(--dodger-blue);
+  border-radius: 17.5px;
+  height: 35px;
+  left: 24px;
+  position: absolute;
+  top: 18px;
+  width: 35px;
+}
+
+.etudiant-profile .m-g5xP2b {
+  left: 34px;
+  top: 28px;
+}
+
+.etudiant-profile .group-3777-VTLyNd {
+  background-color: transparent;
+  height: 367px;
+  left: 0px;
+  position: absolute;
+  top: 100px;
+  width: 217px;
+}
+
+.etudiant-profile .rectangle-651-wDGZWX {
+  background-color: #f1f1f1;
+  border-radius: 0px 12px 12px 0px;
+  height: 367px;
+  left: 1px;
+  position: absolute;
+  top: 0px;
+  width: 212px;
+}
+
+.etudiant-profile .group-3776-wDGZWX {
+  height: 39px;
+  left: 0px;
+  top: 11px;
+  width: 158px;
+}
+
+.etudiant-profile .rectangle-818-gNWK03 {
+  background-color: var(--white);
+  border-radius: 0px 12px 12px 0px;
+  height: 39px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 158px;
+}
+
+.etudiant-profile .rectangle-819-gNWK03 {
+  background-color: var(--dodger-blue);
+  height: 39px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 4px;
+}
+
+.etudiant-profile .calendrier-wDGZWX {
+  background-color: transparent;
+  color: #666666;
+  cursor: pointer;
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 26px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 62px;
+  width: 67px;
+}
+
+.etudiant-profile .profil-wDGZWX {
+  background-color: transparent;
+  height: 22px;
+  left: 26px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 20px;
+  width: 67px;
+}
+
+.etudiant-profile .span0-1NBqKE {
+}
+
+.etudiant-profile .span1-1NBqKE {
+}
+
+.etudiant-profile .rectangle-816-VTLyNd {
+  background-color: var(--black-haze);
+  border-radius: 6px;
+  height: 44px;
+  left: 345px;
+  position: absolute;
+  top: 133px;
+  width: 632px;
+}
+
+.etudiant-profile .rectangle-817-VTLyNd {
+  background-color: var(--black-haze);
+  border-radius: 6px;
+  height: 44px;
+  left: 345px;
+  position: absolute;
+  top: 228px;
+  width: 632px;
+}
+
+.etudiant-profile .rectangle-818-VTLyNd {
+  background-color: var(--black-haze);
+  border-radius: 6px;
+  height: 44px;
+  left: 345px;
+  position: absolute;
+  top: 323px;
+  width: 632px;
+}
+
+.etudiant-profile .nom-VTLyNd {
+  background-color: transparent;
+  height: 32px;
+  left: 345px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 99px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-profile .adresse-email-VTLyNd {
+  background-color: transparent;
+  height: 32px;
+  left: 345px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 194px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-profile .numro-de-tlphone-de-contact-VTLyNd {
+  background-color: transparent;
+  height: 32px;
+  left: 345px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 289px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-profile .ajouter-avatar-VTLyNd {
+  background-color: transparent;
+  height: 32px;
+  left: 345px;
+  letter-spacing: 0.00px;
+  line-height: 32px;
+  position: absolute;
+  text-align: left;
+  top: 384px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-profile .content-VTLyNd {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 8px;
+  left: 360px;
+  position: absolute;
+  top: 143px;
+  width: 239px;
+}
+
+.etudiant-profile .text-svKnAF {
+  flex: 1;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.etudiant-profile .text-VTLyNd {
+  height: auto;
+  left: 360px;
+  position: absolute;
+  top: 236px;
+  width: 239px;
+}
+
+.etudiant-profile .text-Uxi4me {
+  height: auto;
+  left: 360px;
+  position: absolute;
+  top: 332px;
+  width: 239px;
+}
+
+.etudiant-profile .group-17-VTLyNd {
+  background-color: transparent;
+  height: 44px;
+  left: 345px;
+  position: absolute;
+  top: 558px;
+  width: 150px;
+}
+
+.etudiant-profile .rectangle-9-0oIJVd {
+  background-color: #00007b;
+  border-radius: 6px;
+  height: 44px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+}
+
+.etudiant-profile .group-16-0oIJVd {
+  background-color: transparent;
+  height: 17px;
+  left: 37px;
+  position: absolute;
+  top: 12px;
+  width: 78px;
+}
+
+.etudiant-profile .enregistrer-PZbb0F {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: auto;
+}
+
+.etudiant-profile .group-3778-VTLyNd {
+  background-color: transparent;
+  height: 50px;
+  left: 365px;
+  position: absolute;
+  top: 426px;
+  width: 50px;
+}
+
+.etudiant-profile .ellipse-4-JhrYPI {
+  background-color: var(--dodger-blue);
+  border-radius: 25px;
+  height: 50px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+}
+
+.etudiant-profile .m-JhrYPI {
+  left: 17px;
+  top: 17px;
+}
+
+.etudiant-profile .modifier-VTLyNd {
+  background-color: transparent;
+  color: #00007b;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 362px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 484px;
+  width: auto;
+}
+
+.etudiant-profile .signaler-un-problme-VTLyNd {
+  background-color: transparent;
+  color: #666666;
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 28px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 207px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.etudiant-profile .group-3776 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.etudiant-profile .m {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+
+.etudiant-profile .text {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  text-align: left;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="etudiant-profile"><div class="container-center-horizontal"><div class="etudiant-profile screen " data-id="1:120"><div class="group-3776-VTLyNd group-3776" data-id="1:147"><div class="rectangle-741-g5xP2b" data-id="1:148"></div><div class="se-04-g5xP2b valign-text-middle" data-id="1:149">SE-04</div><div class="mr-majite-g5xP2b valign-text-middle" data-id="1:150">Mr. Majite</div><img class="line-69-g5xP2b" data-id="1:151" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b0b3a7a640aadccad4eee/img/line-69.svg" alt="Line 69"><div class="x234679808-g5xP2b valign-text-middle" data-id="1:152">234679808</div><div class="code-g5xP2b valign-text-middle" data-id="1:153">Code :</div><div class="ellipse-3-g5xP2b" data-id="1:154"></div><img class="m-g5xP2b m" data-id="2:248" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b1221b4b55752b7ee2172/img/m.svg" alt="M"></div><div class="group-3777-VTLyNd" data-id="1:156"><div class="rectangle-651-wDGZWX" data-id="1:157"></div><div class="group-3776-wDGZWX group-3776" data-id="1:158"><div class="rectangle-818-gNWK03" data-id="1:159"></div><div class="rectangle-819-gNWK03" data-id="1:160"></div></div><a href="https://www.figma.com/file/PKnXjhkA4lgcTYCrwPLqfc?type=design&node-id=51-46&mode=design" target="_blank"><div class="calendrier-wDGZWX valign-text-middle" data-id="1:161">Calendrier</div></a><div class="profil-wDGZWX valign-text-middle lato-medium-black-14px" data-id="1:162"><span><a href="https://www.figma.com/file/PKnXjhkA4lgcTYCrwPLqfc?type=design&node-id=51-46&mode=design" target="_blank"><span class="span0-1NBqKE lato-medium-black-14px">P</span></a><span class="span1-1NBqKE lato-medium-black-14px">rofil</span></span></div></div><div class="rectangle-816-VTLyNd" data-id="1:163"></div><div class="rectangle-817-VTLyNd" data-id="1:164"></div><div class="rectangle-818-VTLyNd" data-id="1:165"></div><div class="nom-VTLyNd valign-text-middle roboto-normal-log-cabin-14px" data-id="1:166">Nom</div><div class="adresse-email-VTLyNd valign-text-middle roboto-normal-log-cabin-14px" data-id="1:167">Adresse Email</div><p class="numro-de-tlphone-de-contact-VTLyNd valign-text-middle roboto-normal-log-cabin-14px" data-id="1:168">Numéro de téléphone de contact</p><div class="ajouter-avatar-VTLyNd valign-text-middle roboto-normal-log-cabin-14px" data-id="1:169">Ajouter Avatar</div><div class="content-VTLyNd" data-id="1:170"><div class="text-svKnAF text inter-normal-cloud-16px" data-id="1:173">Nom et prénom</div></div><div class="text-VTLyNd text inter-normal-cloud-16px" data-id="1:174">nom@adresse.com</div><p class="text-Uxi4me text inter-normal-cloud-16px" data-id="1:175">05 23 45 67 89</p><div class="group-17-VTLyNd" data-id="1:176"><div class="rectangle-9-0oIJVd" data-id="1:177"></div><div class="group-16-0oIJVd" data-id="1:178"><div class="enregistrer-PZbb0F valign-text-middle" data-id="1:179">Enregistrer</div></div></div><div class="group-3778-VTLyNd" data-id="1:180"><div class="ellipse-4-JhrYPI" data-id="1:181"></div><img class="m-JhrYPI m" data-id="2:247" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/661b0ac923e5afd1c5f15bc7/releases/661b1221b4b55752b7ee2172/img/m.svg" alt="M"></div><div class="modifier-VTLyNd valign-text-middle" data-id="1:183">Modifier</div><div class="signaler-un-problme-VTLyNd valign-text-middle" data-id="1:184">Signaler un problème</div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
